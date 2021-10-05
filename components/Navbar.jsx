@@ -1,19 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
+import { Button, Container, Segment } from 'semantic-ui-react'
+import styles from '../styles/Home.module.scss'
 
 function Navbar() {
     return (
-        <ul>
-            <li>
-                <Link href="/">Home</Link>
-            </li>
-            <li>
-                <Link href="/about">About</Link>
-            </li>
-            <li>
-                <Link href="/contact">Contact</Link>
-            </li>
-        </ul>
+        <Segment padded>
+            <h2>Fit Tool</h2>
+            <Container className={styles.button_container}>
+                <Button>
+                    <Link href="/">Home</Link>
+                </Button>
+                <Button>
+                    <Link href="/about">About</Link>
+                </Button>
+                <Button>
+                    <Link href="/contact">Contact</Link>
+                </Button>
+            </Container>
+        </Segment>
     )
 }
 
