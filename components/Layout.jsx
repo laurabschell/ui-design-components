@@ -1,10 +1,13 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Header from './Header'
+import Sidebar from './Sidebar'
+import Head from "next/head";
 
 function Layout(props) {
     return (
         <div>
-            <Navbar />
+            <Header />
+            <Sidebar/>
             {props.children}
         </div>
     )
